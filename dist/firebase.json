@@ -1,0 +1,13 @@
+{
+  "hosting": [
+    {
+      "site":"streamar",
+      "public": "stream-ar",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    }
+  ]
+}

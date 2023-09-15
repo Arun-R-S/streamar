@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  url: 'https://arun-r-s.github.io/streamAR-public-Hostname/api.json'\n};","map":null,"metadata":{},"sourceType":"module"}
