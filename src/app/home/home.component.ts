@@ -31,17 +31,26 @@ export class HomeComponent implements OnInit {
       console.error('Error:', error); // Handle any error that occurred
       //console.error('Error:', error); // Handle any error that occurred
       this.webURL = ({url:"",isAllow:false})
-      this.redirect();
+      this.UrlError();
     });
     //return ({url:"",isAllow:false})
     //this.redirect();
   }
+  UrlError(){
+    this.route.navigate(['/error-404']);
+  }
   redirect(){
     const isReachable = require('is-reachable');
     (async () => {
-      if(await (isReachable(this.webURL.url) && this.webURL.isAllow==true)){
+      if(this.webURL.isAllow==true){
         console.log("Yes");
-        document.getElementById('mainScreen')?.setAttribute('src',this.webURL.url);
+        if(await (isReachable(this.webURL.url) ))
+        {
+          document.getElementById('mainScreen')?.setAttribute('src',this.webURL.url);
+        }
+        else{
+          this.route.navigate(['/serverShutdown']);
+        }
       }
       else{
         this.route.navigate(['/serverShutdown']);
