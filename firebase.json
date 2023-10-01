@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site":"streamar",
     "public": "dist",
     "ignore": [
       "firebase.json",

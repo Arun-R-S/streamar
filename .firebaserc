@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "streamar-io"
+    "default": "streamar"
+  },
+  "targets":{
+    "streamar-io":{
+      "hosting":{
+        "streamar":[
+          "streamar"
+        ]
+      }
+    }
   }
 }
